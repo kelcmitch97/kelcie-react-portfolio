@@ -1,5 +1,41 @@
 .header {
-    background: var(--dark);
+    background-image: linear-gradient(var(--dark), var(--primary));
+    color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 20px 35px;
+}
+
+.header a {
+    text-decoration: none;
     color: var(--light);
 }
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.80vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: var(--light);
+}
+
+
+
+
+
+
+
 
