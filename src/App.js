@@ -8,26 +8,32 @@ import Resume from './components/Resume';
 
 function App() {
 
-  const [currentTab, setCurrentTab] = useState('about');
+  const [currentTab, setCurrentTab] = useState('contact');
 
-  const loadTab = () => {
-    switch(currentTab) {
-      case 'about': 
-        return <About />;
-      case 'project': 
-        return <Project />;
-      case 'contact': 
-        return <Contact />;
-      case 'resume': 
-        return <Resume />;
+  const renderTab = () => {
+    if (currentTab === 'about') {
+      return <About />;
     }
-  };
+
+    if (currentTab === 'project') {
+      return <Project />;
+    }
+
+    if (currentTab === 'contact') {
+      return <Contact />;
+    }
+
+    if (currentTab === 'resume') {
+      return <Resume />;
+    }
+  }
+
 
   return (
     <div className="app">
         <Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
       <div>
-          <main>{loadTab()}</main>
+          <main>{renderTab()}</main>
       </div>
       <div>
         <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nav.css';
 
-export default function Nav() {
+export default function Nav({ currentTab, handleTabchange}) {
 
   return (
     <header className='header'>
@@ -12,9 +12,9 @@ export default function Nav() {
       </h1>
       <nav>
         <ul>
-          <li>
-            <a data-testid='about' href='#about'>
-              About Me
+          <li className='nav-item'>
+            <a href='#about' onClick={() => handleTabchange('about')} className={currentTab === 'about' ? 'nav-link active' : 'nav-link'}>
+              About Me 
             </a>
           </li>
           <li>
